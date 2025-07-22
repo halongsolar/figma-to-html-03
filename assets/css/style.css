@@ -1,12 +1,16 @@
 * {
+  /*  giúp kích thước phần tử bao gồm padding và border, đơn giản hóa bố cục CSS. */
   box-sizing: border-box;
 }
 
 html {
+  /* Thiết lập 1rem = 10px */
   font-size: 62.5%;
 }
 
 body {
+  /* Tức là 16px, kích thước font mặc định mong muốn cho body */
   font-size: 1.6rem;
+
   font-family: "Sora", sans-serif;
 }

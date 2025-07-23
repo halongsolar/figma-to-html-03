@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --headre-bg: #10375c;
+}
 html {
   /* Thiết lập 1rem = 10px */
   font-size: 62.5%;
@@ -13,4 +16,110 @@ body {
   font-size: 1.6rem;
 
   font-family: "Sora", sans-serif;
+}
+
+/* =================common================ */
+.container {
+  width: 1170px;
+
+  /* thiết lập chiều rộng tối thiểu container sử dụng hàm calc() để tính toán giá trị này một cách động. --> khi thu trang web sẽ không bị mất chữ */
+  max-width: calc(100% - 48px);
+  /* căn giữa một khối container */
+  margin: 0 auto;
+}
+
+a {
+  /* bỏ gạch chân các thẻ a */
+  text-decoration: none;
+}
+
+/* cấu hình trung cho các nút giống có số liệu giống nhau và nút sing up sau đó sẽ sửa nút sing up riêng */
+.btn {
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  background: #2e80ce;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 999px;
+}
+
+/* được sử dụng để áp dụng các kiểu (styles) cho một phần tử khi con trỏ chuột của người dùng di chuyển qua phần tử đó */
+.btn:hover {
+  /* là một thuộc tính CSS được sử dụng để kiểm soát độ trong suốt của một phần tử. */
+  opacity: 0.9;
+}
+
+/* =================header================ =*/
+.header {
+  padding-top: 30px;
+  /* Màu nền của header */
+  background: var(--headre-bg);
+
+  /* chiều cao tối thiểu của một phần tử sẽ bằng 100% chiều cao của khung nhìn */
+  min-height: 100vh;
+}
+
+.header-top {
+  /* xoay ngang các thẻ  */
+  display: flex;
+  /* phân bổ các thẻ đầu tiên nằm sát điểm bắt đầu và mục cuối nằm sát điểm kết thúc của container các điểm giữa được phân bổ với khoảng trống đều nhau ở giữa */
+  justify-content: space-between;
+
+  /* Căn giữa trục dọc header-top */
+  align-items: center;
+}
+
+.navbar__list {
+  /* xoay ngang các thẻ trong khối navbar__list */
+  display: flex;
+}
+
+.header__action--login,
+.navbar__link {
+  padding: 8px 21px;
+  color: #c9d2da;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75; /* 175% */
+}
+/* :hover: Đây là pseudo-class, được thêm vào sau bộ chọn, đại diện cho trạng thái mà phần tử đó đang được "hover" (di chuột qua). */
+.navbar__link:hover,
+.navbar__link--active {
+  /* tăng hiệu ứng bóng đổ nhưng không làm ảnh hưởng các thẻ bên cạnh */
+  text-shadow: 1px 0 0 currentColor;
+
+  color: #fff;
+}
+
+/* ::before để tạo một phần tử con đặc biệt nằm ngay trước nội dung của phần tử gốc mà không cần phải thêm nó vào mã HTML */
+.navbar__link--active::before {
+  content: "";
+
+  /* để icon nhận được kích thước */
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  /* để làm cong các góc của một phần tử, tạo thành hình tròn hoặc bầu dục. Khi bạn đặt giá trị 50%, điều này có nghĩa là bán kính cong sẽ bằng một nửa chiều rộng và một nửa chiều cao của phần tử. */
+  border-radius: 50%;
+  background: #fff;
+  top: -3px;
+  /* Để di chuyển icon bằng các thuộc tính: top, right, bottom, left mà icon vẫn chiếm không gian ban đâu của nó trong bố cục */
+  position: relative;
+  right: 8px;
+}
+
+.header__action--login {
+  min-width: 144px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+
+.header__action--login{
+  margin-right: 7px;
 }

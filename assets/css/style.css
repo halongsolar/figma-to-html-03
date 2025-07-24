@@ -92,7 +92,6 @@ a {
 .navbar__link--active {
   /* tăng hiệu ứng bóng đổ nhưng không làm ảnh hưởng các thẻ bên cạnh */
   text-shadow: 1px 0 0 currentColor;
-
   color: #fff;
 }
 
@@ -114,12 +113,100 @@ a {
   right: 8px;
 }
 
-.header__action--login {
+.header__action--signup {
   min-width: 144px;
   line-height: 44px;
   font-size: 1.6rem;
 }
 
-.header__action--login{
+.header__action--login {
   margin-right: 7px;
+}
+
+/* ===============hero============= */
+
+.hero {
+  /* Xoay ngang hai khối left và right */
+  display: flex;
+  /* cách khối trên 76px */
+  padding-top: 76px;
+
+  /* căn giữa chiều dọc */
+  align-items: center;
+}
+
+.hero__content {
+  /* chiếm 44% khoảng không gian trong thẻ hero */
+  width: 44%;
+}
+
+.hero__media {
+  /* chiếm hết khoảng không gian còn lại */
+  flex: 1;
+}
+
+.hero__heading {
+  color: #fff;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -1.4px;
+}
+
+.hero_desc {
+  /* cách bên trên là 22px */
+  margin-top: 22px;
+  color: #c9d2da;
+  font-family: Sora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px; /* 166.667% */
+}
+
+.hero__row {
+  /* cách khối trên 38 */
+  margin-top: 38px;
+  /* Bỏ khoảng cách mặt định giữa 2 thẻ trong khối hero__row */
+  display: flex;
+  align-items: center;
+  /* khoảng cách giưa 2 thẻ trong khối hero__row */
+  column-gap: 38px;
+}
+
+.hero__phone {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.67; /* 166.667% */
+}
+
+.hero__images {
+  /* xoay ngang 2 bức ảnh */
+  display: flex;
+
+  /* Căn giữa 2 bức ảnh trong thẻ hero */
+  align-items: center;
+
+  /* dồn 2 bức ảnh sang bên phải của thẻ hero */
+  justify-content: flex-end;
+}
+
+.hero__img {
+  border-radius: 6px;
+
+  /* Lệnh không để méo ảnh */
+  object-fit: cover;
+}
+.hero__img-large {
+  width: 330px;
+  height: 540px;
+  margin-right: -6px;
+  z-index: 1;
+}
+
+.hero__img-small {
+  width: 210px;
+  height: 410px;
 }

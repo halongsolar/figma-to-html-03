@@ -240,7 +240,7 @@ a {
 margin: 0 auto; hoạt động thế nào?
 0: Đặt lề trên (margin-top) và lề dưới (margin-bottom) bằng 0. Tức là không có khoảng cách nào ở phía trên và phía dưới do lề.
 auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự động. Khi bạn đặt auto cho lề hai bên của một phần tử khối có chiều rộng cố định, trình duyệt sẽ tự động chia đều khoảng trống còn lại ở cả hai phía, từ đó đẩy phần tử đó vào giữa container của nó. */
-  margin: 0 auto;
+  margin: 18px auto 0;
 }
 
 .service__row {
@@ -256,20 +256,30 @@ auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự độn
 .service__img {
   width: 570px;
   height: 570px;
+
+  /* border-radius: 12px; là một thuộc tính CSS dùng để làm cong các góc của một phần tử HTML */
   border-radius: 12px;
+
+  /* Khi bạn đặt object-fit: cover; cho một hình ảnh hoặc video, nó có nghĩa là: Phần tử sẽ bao phủ toàn bộ vùng chứa: Hình ảnh hoặc video sẽ được điều chỉnh kích thước (cả chiều rộng và chiều cao) để lấp đầy hoàn toàn vùng chứa của nó. */
   object-fit: cover;
 }
 
 .service-item {
+  /* Khi bạn đặt padding: 21px;, điều này có nghĩa là phần tử sẽ có 21 pixel khoảng trống ở tất cả bốn phía: trên, dưới, trái và phải, giữa nội dung và viền của nó. */
   padding: 21px;
+
+  /* display: flex; nghĩa là gì? Khi bạn áp dụng display: flex; cho một phần tử, bạn đang nói với trình duyệt rằng: "Hãy sắp xếp các phần tử con trực tiếp của tôi theo mô hình Flexbox." Điều này mang lại cho bạn khả năng kiểm soát rất lớn về cách các phần tử con đó được căn chỉnh, phân bổ không gian và sắp xếp theo nhiều hướng khác nhau. */
   display: flex;
   width: 470px;
   border-radius: 10px;
   background: #fff;
+
+  /* Khi bạn đặt transition: 0.25s; cho một phần tử, bạn đang nói với trình duyệt rằng: "Bất kỳ thay đổi nào của thuộc tính CSS trên phần tử này sẽ diễn ra trong vòng 0.25 giây." */
   transition: 0.25s;
 }
 
 .service-item:hover {
+  /* Giữ nguyên không gian: Khi bạn đặt position: relative; cho một phần tử, nó vẫn chiếm không gian ban đầu của nó trong bố cục trang. Dù bạn có di chuyển nó bằng top, bottom, left, hoặc right, các phần tử khác xung quanh nó sẽ không dịch chuyển để lấp vào khoảng trống đó. */
   position: relative;
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
 }
@@ -307,6 +317,71 @@ auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự độn
   line-height: 1.75;
 }
 
-.service__btn{
-margin-top: 55px;
+.service__btn {
+  /* margin-top: 55px; là một thuộc tính CSS dùng để tạo khoảng trống bên ngoài phía trên cùng của một phần tử. */
+  margin-top: 55px;
+}
+
+/* =============== Work ============= */
+.work {
+  background: #f6fbff;
+  padding: 100px 0;
+}
+
+.work__desc {
+  /* Giới hạn độ rộng của thẻ work__desc*/
+  width: 468px;
+}
+
+.work__list {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.work-item {
+  /* nội dung bên trong phần tử đó sẽ cách đường viền của nó 43 pixel ở cả bốn phía. hay ns work-item cách work__list là 43 pixel ở cả 4 phía */
+  padding: 43px;
+
+  /* Các góc cho các phân tử chung class work-item được làm tròn bằng 4px */
+  border-radius: 4px;
+  background: #fff;
+
+  /* thêm viên và nét liền viền rộng 16px hay cách solis-là nét liền*/
+  border: 16px solid #eaf6ff;
+  transition: 0.25s;
+}
+
+.work-item:hover {
+  /* :hover đổi màu đường viền thẻ item 1 theo dự án  */
+  border-color: #2e80ce;
+
+  /* Khi bạn áp dụng transform: translateY(-16px); cho một phần tử HTML, phần tử đó sẽ được dịch chuyển lên trên 16 pixel so với vị trí ban đầu của nó. */
+  transform: translateY(-16px);
+}
+
+.work-item__heading {
+  margin-top: 18px;
+  color: #10375c;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.38;
+}
+
+.work-item__desc {
+  margin-top: 28px;
+  color: #575f66;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75; 
+}
+
+.work-item__more{
+  margin-top: 18px;
+  display: inline-block;
+  color: #2E80CE;
+font-size: 1.6rem;
+font-weight: 400;
+line-height: 1.75;
 }

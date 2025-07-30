@@ -88,13 +88,13 @@ a {
   transition: 0.25s;
 }
 
-.control-icon--next{
-rotate: 180deg;
+.control-icon--next {
+  rotate: 180deg;
 }
 
-.control__btn:hover{
-  background: #2E80CE;
-  background-color: #2E80CE;
+.control__btn:hover {
+  background: #2e80ce;
+  background-color: #2e80ce;
   color: #fff;
 }
 /* =================header================ =*/
@@ -528,4 +528,56 @@ auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự độn
 .team__control {
   margin-top: 38px;
   justify-content: center;
+}
+
+/* =============== Install ============= */
+
+.install__inner {
+  margin: 180px 0 85px;
+  /* để bức ảnh sát vs chân khối install__inner */
+  position: relative;
+  display: flex;
+  /* xoay ngang hai phần tử chính trong khối install__inner */
+  align-items: center;
+  /* giãn 2 phần tử chính kịch ra hai đầu  */
+  justify-content: space-between;
+  /* sau khi giãn phần tử ra đầu thì làm cho 2 phần tử thụt lại so vs 2 đầu một khoảng cách 70px */
+  padding: 0 70px;
+  height: 472px;
+  border-radius: 4px;
+  background: #2e80ce;
+}
+
+.install__img {
+  /* để bức ảnh sát vs chân khối install__inner */
+  position: absolute;
+  /* để bức ảnh sát vs chân khối install__inner */
+  bottom: 0;
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+}
+
+.install__content {
+  min-width: 586px;
+}
+
+.install__heading {
+  color: #fff;
+  max-width: 489px;
+}
+
+.install__desc {
+  margin-top: 18px;
+  max-width: 586px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.67;
+}
+
+.install__row {
+  margin-top: 38px;
+  display: flex;
+  column-gap: 28px;
 }

@@ -19,6 +19,14 @@ body {
 }
 
 /* =================common================ */
+
+/* Ý nghĩa của đoạn mã Đoạn mã này nhắm tới một nhóm các phần tử HTML: input: Các trường nhập liệu. textarea: Vùng nhập liệu đa dòng. select: Danh sách lựa chọn. button: Các nút bấm. */
+input,
+textarea.select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
 .container {
   width: 1170px;
 
@@ -694,7 +702,7 @@ auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự độn
 
 /* =============== appointment ============= */
 .appointment {
-  margin: 85px 0;
+  margin-top: 85px;
 }
 
 .appointment__inner {
@@ -718,6 +726,132 @@ auto: Đặt lề trái (margin-left) và lề phải (margin-right) tự độn
   margin: 18px auto 0;
 }
 
-.appointment__btn{
+.appointment__btn {
   margin-top: 38px;
+}
+
+/* =============== appointment ============= */
+.footer {
+  margin-top: 170px;
+  padding-top: 100px;
+  background: #10375c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc {
+  margin-top: 28px;
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer__list {
+  margin: 20px 0 28px;
+}
+
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* Không để chữ xuống hàng */
+  white-space: nowrap;
+}
+
+.footer__link:hover {
+  text-decoration: underline; /* text-decoration: underline; là một thuộc tính CSS dùng để gạch chân văn bản. */
+}
+
+.footer__item {
+  margin-bottom: 10px; /* margin-bottom: 10px; là một thuộc tính CSS dùng để tạo khoảng trống bên ngoài phía dưới cùng của một phần tử. */
+}
+
+.footer__social {
+  margin-top: 20px;
+  margin: 20px 0 28px;
+  display: flex;
+  column-gap: 10px; /* dãn các cột trong phần tử 10px */
+}
+
+.footer__social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #2e80ce;
+  /* Khi trỏ chuột vào hiệu ứng sẽ chậm đi 0.25s */
+  transition: 0.25s;
+}
+
+/* bình thường thì các icon sẽ nền trắng chữ xanh nhưng khi hover thì tạo ra hiệu ứng khí chỉ chuột vào sẽ nền xanh chữ trắng */
+.footer__social-btn:hover {
+  background: #2e80ce;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form__inbut {
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  background: #10375c;
+  border: 1px solid #406181;
+  background: transparent; /* transparent: nền trong suốt */
+  outline: none; /* outline: none; là một thuộc tính CSS dùng để loại bỏ đường viền nổi bật xung quanh một phần tử khi nó được chọn hoặc nhận tiêu điểm (focus). */
+  color: #fff;
+}
+
+.footer-form__inbut::placeholder {
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.footer-form__submit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  border: none;
+}
+
+/* .footer-form__submit:hover: Bộ chọn này nhắm vào trạng thái :hover (di chuột qua) của phần tử có class footer-form__submit. Bất kỳ kiểu nào bên trong khối này sẽ chỉ được áp dụng khi con trỏ chuột ở trên phần tử đó. */
+.footer-form__submit:hover {
+  cursor: pointer; /* cursor: pointer; là một thuộc tính CSS rất phổ biến, được dùng để thay đổi hình dạng con trỏ chuột khi nó di chuyển qua một phần tử. */
+  opacity: 0.9; /* opacity: 0.9;: Khi người dùng di chuột qua, độ mờ của phần tử sẽ giảm xuống 90%. Điều này tạo ra một hiệu ứng mờ nhạt tinh tế, cung cấp phản hồi trực quan rằng phần tử đang tương tác được. */
+}
+
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86;
 }
